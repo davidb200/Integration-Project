@@ -138,7 +138,6 @@ def get_valid_population(prompt):
             if valid_population <= 0:  # The user does not enter a legitimate
                 # number for the population
                 print("Population can't be 0 or a - number. Try again")
-                valid_population_input_from_user = False
             else:  # The user enters a legitimate number for the population
                 # valid_input_validation_from_user will return true
                 return valid_population
