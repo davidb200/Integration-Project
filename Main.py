@@ -2,7 +2,7 @@
 
 __author__ = "David Betanzos"
 
-import time
+from time import sleep
 
 
 def main():
@@ -90,7 +90,7 @@ def get_greeting():
     Asks the user running the project for their name and describes what
     my project is about
     Parameters : None
-    Return : None
+    Return     : None
     """
     print("Hello! Welcome to my \"Integration Project\"")
     name_of_user = input("Please enter your name: ")
@@ -102,7 +102,7 @@ def get_valid_float_input(prompt):
     """
     Gets valid float input from the user and returns a valid float.
     Parameters: A prompt asking the user to enter a number
-    Return: A valid float
+    Return    : A valid float
     """
     valid_float_input_from_user = False
     while not valid_float_input_from_user:
@@ -114,7 +114,6 @@ def get_valid_float_input(prompt):
             if valid_float <= 0:  # Anything the user enters
                 # cannot be less than 0 (dealing with population)
                 print("It can't be a negative number or 0 try again.")
-                valid_float_input_from_user = False
             else:  # User enters a valid float to work with
                 # valid_float_input_fro_user will return true
                 return valid_float
@@ -126,7 +125,7 @@ def get_valid_population(prompt):
     user. Population can not be a decimal, negative number, or
     zero.
     Parameters : A prompt asking the user to enter a number for a variable
-    Return : A valid population number
+    Return     : A valid population number
     """
     valid_population_input_from_user = False
     while not valid_population_input_from_user:
@@ -150,11 +149,11 @@ def countdown_timer():
     Timer to show when the answers the computer calculates comes on the
     screen.
     Parameters: None
-    Return : None
+    Return    : None
     """
     for seconds in range(5, 0, -1):
         print(seconds)
-        time.sleep(1)
+        sleep(1)
 
 
 def get_feedback_from_user():
@@ -162,7 +161,7 @@ def get_feedback_from_user():
     After the program is finished, I ask the user to give feedback about
     my program and their response will write to a file called feedback.txt
     Parameters: None
-    Returns: None
+    Returns   : None
     """
     feedback_file = open("feedback.txt.", 'a')
     userinput = input("Provide me some feedback: ")
